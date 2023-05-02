@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Marhey:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+<body>
+    <p class="copy">
+        By <span><a href="https://moatasimashraf.000webhostapp.com" target="_blank">Moatasim</a></span>
+    </p>
+    <div class="container">
+        <div class="error">
+            <i class="fa-solid fa-ban"></i>
+            <p>city not found</p>
+        </div>
+        <form action="">
+            <input type="text" placeholder="Search City">
+            <button><i class="fa-brands fa-searchengin"></i></button>
+        </form>
+        <div class="data-info">
+            <h2> <span></span></h2>
+            <div class="date">Sunday, 12:43</div>
+            <div class="sky-description"> </div>
+            <div class="temp-description">
+                <div class="icon"><img src="imgs/clearnight.png" alt=""></div>
+                <div class="temp"></div>
+            </div>
+            <div class="humidity"></div>
+            <div class="wind"></div>
+            <ul class="next-hrs">
+                <li>
+                    <div class="time min">min</div>
+                    <div class="predicted-temp"></div>
+                </li>
+                <li>
+                    <div class="time max">max</div>
+                    <div class="predicted-temp"></div>
+                </li>
+            
+            </ul>
+        </div>
+    </div>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

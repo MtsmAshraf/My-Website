@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@400;500;600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <title>Card</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="img-left">
+                <img class="desktop" src="images/bg-main-desktop.png" alt="">
+                <img class="mobile" src="images/bg-main-mobile.png" alt="">
+            </div>
+            <div class="content">
+                <form action="">
+                    <label for="">Cardholder Name</label>
+                    <input type="text" placeholder="e.g. John Doe">
+                    <label for="">Card Number</label>
+                    <input type="text" maxlength="16" placeholder="e.g. 1234 5678 9009 0000">
+                    <label for="">EXP. Date [MM/YY]</label>
+                    <input type="text" maxlength="2" placeholder="MM">
+                    <input type="text" maxlength="2" placeholder="YY">
+                    <label for="">CVC</label>
+                    <input type="text" maxlength="3" placeholder="e.g. 123">
+                    <input type="submit" value="Confirm">
+                    <div class="complete">
+                        <img src="images/icon-complete.svg" alt="">
+                        <p>Thank You!</p>
+                        <span>We've added your card details</span>
+                        <button>Continue</button>
+                    </div>
+                </form>
+            </div>
+            <div class="img front">
+                <img src="images/bg-card-front.png" alt="">
+                <div class="logos">
+                    <img src="images/card-logo.svg" alt="">
+                </div>
+                <span>1234 5678 9009 0000</span>
+                <div class="info">
+                    <div class="name">John Doe</div>
+                    <div class="date">00/00</div>
+                </div>
+            </div>
+            <div class="img back"><img src="images/bg-card-back.png" alt=""><span></span></div>
+        </div>
+    </main>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

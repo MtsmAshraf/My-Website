@@ -1,0 +1,215 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --body-bg:#260b29;
+    --container-bg:#93e0d9;
+    --icon-bg:#0a114a;
+    --main-transition:all 0.2s 0s linear;
+}
+body{
+    font-family: "Josefin Sans",sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url(../imgs/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+body::before{
+    content: "";
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-bg);
+    opacity: 0.7;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+button:focus{
+    outline: none;
+}
+img,video{
+    max-width: 100%;
+}
+body > p{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 10px;
+}
+body > p span a{
+    font-size: 22px;
+    font-weight: bold;
+    color: #fad254;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    max-width: 100%;
+    background-color: var(--container-bg);
+    padding: 20px;
+    border-radius: 20px;  background-image: url(../imgs/bg-day.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.container .error{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--body-bg);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--container-bg);
+    z-index: -1;
+    opacity: 0;
+    width: 250px;
+    transition: var(--main-transition);
+}
+.container .error > svg{
+    color: red;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.container .error p{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .error p svg{
+    font-size: 20px;
+}
+.container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.container form input{
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid var(--icon-bg);
+    padding: 5px 10px;
+    background-color: transparent;
+    margin-bottom: 10px;
+    transition: var(--main-transition);
+}
+.container form input:focus{
+    border-radius: 20px;
+    outline: none;
+    background-color: var(--icon-bg);
+    caret-color: var(--container-bg);
+    color:var(--container-bg);
+}
+.container form input:focus::placeholder{
+    color: var(--container-bg);
+}
+.container form button{
+    background-color: transparent;
+    color: var(--icon-bg);
+    width: 60px;
+    height: 30px;
+    transition: var(--main-transition);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.container form button:focus,
+.container form button:hover{
+    background-color: var(--icon-bg);
+    color: var(--container-bg);
+}
+.container .data-info{
+    position: relative;
+    padding: 30px 20px;
+    margin-top: 20px;
+}
+.container .data-info h2{
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.container .data-info h2 span{
+    font-size: 12px;
+}
+.container .data-info .date{
+    font-size: 16px;
+}
+.container .data-info .sky-description{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.container .data-info .temp-description{
+    display: flex;
+    align-items: center;
+}
+.container .data-info .temp-description .icon{
+    width: 70px;
+}
+.container .data-info .temp-description .temp{
+    font-size: 40px;
+    font-weight: normal;
+}
+.container .data-info .wind{
+    margin-bottom: 20px;
+}
+.container ul{
+    display: flex;
+    background-color: rgb(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container ul li{
+    text-align: center;
+    margin-bottom: 20px;
+    width: 40px;
+}
+.container ul li .predicted-temp{
+    font-size: 30px;
+    margin-top: 10px;
+}
+@media (max-width:500px) {
+    .container ul{
+        justify-content: space-around;
+    }
+    .container ul li{
+        width: calc(100% / 3);
+    }
+}

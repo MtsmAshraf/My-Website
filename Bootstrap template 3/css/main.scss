@@ -1,0 +1,190 @@
+@use "sass/global";
+
+nav { 
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-light);
+    z-index: 10;
+    ul {
+        button{
+            background-color: var(--main-color) !important;
+        }
+        .nav-item{
+            transition: var(--main-transition);
+            &.active{
+                a{
+                    transition: var(--main-transition);
+                    color: var(--main-color) !important;
+                    font-weight: bold !important;
+                }
+            }
+        }
+    }
+}
+
+.d-flex:has(>span) {
+    position: relative;
+    video,img{
+        height: 500px;
+        width: 250px;
+        position: absolute;
+    }
+    video{
+        border-radius: 70px;
+        height: 495px;
+        width: 245px;
+    }
+    span:first-of-type{
+        background-image: linear-gradient(to left, var(--main-color) 50%, var(--sec-color));
+        width: 400px;
+        height: 400px;
+    }
+    span:nth-of-type(2){
+        position: absolute;
+        top:0px;
+        right: 40px;
+        background-color: var(--main-color);
+        width: 20px;
+        height: 20px;
+    }
+    svg{
+        position: absolute;
+        bottom: 0;
+        left: 40px;
+        color: var(--main-color) !important;
+    }
+}
+.landing{
+    height: calc(100vh - 80px);
+    h1 {
+        font-size: 70px;
+        font-weight: 600;
+        font-family: "Noto Serif Oriya",serif;
+    }
+}
+.qoute{
+    background-image: linear-gradient(135deg, rgb(231, 103, 103) , var(--sec-color));
+    p{
+        font-family: "Noto Serif Oriya",serif;
+        font-weight: 600;
+        font-size: 40px;
+    }
+    img{
+        width: 150px;
+    }
+}
+.features{
+    svg{
+        color: var(--sec-color);
+    }
+}
+.about{
+    h2{
+        font-size: 50px;
+        font-family: "Noto Serif Oriya",serif;
+        font-weight: 600;
+    }
+}
+.footer{
+    a:hover{
+        text-decoration: underline !important;
+        color: white !important;
+    }
+}
+.download{
+    background-image: url(../img/nikita-kachanovsky-OVbeSXRk_9E-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    h2{
+        font-size: 70px;
+        font-family: "Noto Serif Oriya",serif;
+        font-weight: 600;
+    }
+    button{
+        transition: var(--main-transition);
+        &:hover{
+            background-color: var(--bg-light) !important;
+            color: var(--bg-dark) !important;
+        }
+    }
+}
+@media (max-width:992px) {
+    nav ul button {
+      width: fit-content;
+    }  
+    .landing{
+        height: 1300px;
+        h1{
+            font-size: 50px;
+        }
+        .text-left img{
+            width: 100px !important;
+        }
+    }
+    .d-flex:has(>span) {
+        margin-top: 200px;
+        video{
+            border-radius: 40px;
+        }
+        span:nth-of-type(2){
+            right: -30px;
+        }
+        svg{
+            left: -30px;
+        }
+    }
+    .features {
+        .container{
+            .d-flex{
+                .d-flex{
+                    width: 80% !important;
+                    video{
+                        width: 230px;
+                        border-radius: 30px !important;
+                    }
+                }
+            }
+        }
+    }
+    .about{
+        .text-left{
+            width: 100% !important;
+            padding: 0 !important;
+        }
+        img{
+            width: 80% !important;
+        }
+    }
+  }
+@media (max-width:767px) {
+    .qoute{
+        p{
+            width: 100% !important;
+            font-size: 30px;
+        }
+    }
+    .download{
+        h2{
+            font-size: 50px;
+        }
+    }
+}
+@media (max-width:450px) {
+    .d-flex .d-flex:has(>span) {
+        width: 100% !important;
+    }
+    .d-flex:has(>span) {
+        width: 100% !important;
+        position: relative;
+        video,img{
+            height: 500px;
+            width: 250px;
+            position: absolute;
+        }
+        img{
+            height: 500px !important;
+            min-width: 250px !important;
+        }
+    }
+}

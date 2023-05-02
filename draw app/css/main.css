@@ -1,0 +1,186 @@
+*,*::after,*::before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --main-transition:all 0.2s 0s linear;
+    --bg-one:#24243e;
+    --bg-two:#302b63;
+    --bg-three:#0f0c29;
+    --main-border-radius:30px 0px;
+    --transparent-bg:rgb(255, 255, 255,0.05);
+    --border-color:rgb(220, 86, 108);
+}
+body{
+    font-family: "Marhey",sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right,var(--bg-one) , var(--bg-two),var(--bg-three)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+button:focus{
+    outline: 1px solid var(--border-color);
+}
+img,video{
+    max-width: 100%;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@media (min-width:767px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container{
+        width: 980px;
+    }
+}
+@media (min-width:1200px) {
+    .container{
+        width: 1190px;
+    }
+}
+.container{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--transparent-bg);
+    border-radius: var(--main-border-radius);
+    border: 1px solid rgb(243, 160, 174);
+}
+.container h2{
+    text-transform: uppercase;
+    color: rgb(209, 144, 144);
+    margin-bottom: 20px;
+}
+.container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 25%;
+    margin: 0px auto 20px;
+}
+.container form input{
+    background-color: var(--transparent-bg);
+    border: none;
+    border-left: 5px solid var(--border-color);
+    border-right: 5px solid var(--border-color);
+    border-radius: var(--main-border-radius);
+    padding: 5px 30px;
+    color: white;
+    text-align: center;
+    caret-color: var(--border-color);
+    margin-bottom: 20px;
+    transition: var(--main-transition);
+}
+.container form input:focus{
+    outline: none;
+    background-color: transparent;
+}
+.container form button{
+    width: 100%;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--border-color);
+    padding: 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: var(--main-transition)
+}
+.container form button:hover{
+    background-color: var(--transparent-bg);
+    color: white;
+}
+.container form button.reset{
+    background-color: rgb(235, 63, 63);
+    color: white;
+    border-color: white;
+}
+.container .items{
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 30px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(100px,1fr));
+    gap: 20px;
+    position: relative;
+}
+@media (max-width:767px) {
+    .container .items{
+        grid-template-columns: repeat(1,minmax(100px,1fr));
+    }
+}
+.container .items span{
+    border: none;
+    border-left: 5px solid var(--border-color);
+    border-right: 5px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: var(--main-border-radius);
+    padding: 8px;
+    color: rgb(242, 179, 179);
+    transition: var(--main-transition);
+    font-size: 20px;
+}
+.container > button{
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--border-color);
+    padding: 10px 30px;
+    font-size: 22px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: var(--main-transition);
+    position: relative;
+}
+.container > button::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: var(--transparent-bg);
+    width: 200%;
+    height: 200%;
+    transform-origin: center;
+    transform: rotateZ(45deg) translate(-50%,-50%);
+    z-index: -1;
+    transition: var(--main-transition);
+}
+.container > button:hover{
+    transform: scale(1.1);
+}
+.container > button:hover::before{
+    transform: rotateZ(45deg) translate(-50%,200%);
+}

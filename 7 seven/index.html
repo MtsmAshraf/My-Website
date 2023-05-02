@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+  <div class="rules">
+    <div class="pop-up">
+      <img src="images/icon-close.svg" class="close" alt="">
+      <img src="images/image-rules.svg" alt="">
+    </div>
+  </div>
+  <div class="rules-btn">
+    rules
+  </div>
+  <div class="container">
+    <div class="header">
+      <h2>Rock Paper Scissors</h2>
+      <div class="score">
+        <p>score</p>
+        <span>0</span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="choose" style="display: ;">
+        <p>pick one!</p>
+        <img src="images/bg-triangle.svg" alt="">
+        <div class="img shape paper" id="paper">
+          <img src="images/icon-paper.svg" alt="">
+        </div>
+        <div class="img shape scissors" id="scissors">
+          <img src="images/icon-scissors.svg" alt="">
+        </div>
+        <div class="img shape rock" id="rock">
+          <img src="images/icon-rock.svg" alt="">
+        </div>
+      </div>
+      <div class="you-picked" style="display:none ;">
+        <p class="result">YOU LOSE!</p>
+        <span>PLAY AGAIN?</span>
+        <div class="box you">
+          <h3>You picked</h3>
+          <div class="img shape">
+            <img src="images/icon-paper.svg" alt="">
+          </div>
+        </div>
+        <div class="box house">
+          <h3>the house picked</h3>
+          <div class="back"></div>
+          <div class="img shape">
+            <img src="images/icon-paper.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="js/all.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

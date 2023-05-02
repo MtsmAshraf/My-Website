@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/project2.css">
+    <title>To Do list</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="well-done-msg">
+        <div class="cover"></div>
+        <i class="fa-regular fa-circle-check"></i>
+        <h3>Great!</h3>
+    </div>
+    <div class="logo"><i class="fa-regular fa-circle-check"></i></div>
+    <div class="content">
+        <i class="fa-solid fa-clipboard-check back"></i>
+        
+        <!-- <div class="overlay"></div> -->
+        <h1> TO DO LIST</h1>
+        <form action="" class="add">
+            <input type="text" placeholder="Add A Task">
+            <button>ADD TASK</button>
+        </form>
+        <div class="tasks">
+            <div class="to-do">
+                <h3>To-Do Tasks</h3>
+                <ul>
+                    <!-- <div class="list-item">
+                        <li>
+                            <span>Task</span> 
+                            <div class="icons">
+                                <i class="fa-regular fa-check"></i>
+                            </div>
+                        </li>
+                        <button><i class="fa-solid fa-trash delete-icon"></i></button>
+                    </div> -->
+                </ul>
+            </div>
+            <div class="done">
+                <h3>Done Tasks</h3>
+                <ul>
+                    <!-- <li>Task</li>
+                        <li>Task</li>
+                        <li>Task</li>
+                        <li>Task</li> -->
+                    </ul>
+                </div>
+            </div>
+            <button style="background-color: rgb(236, 38, 38);" id="clear">CLEAR ALL TASKS!</button>
+            <audio src="audio/done.wav" controls style="display: none;" class="done-sfx"></audio>
+    </div>
+    <p class="copyright">&copy; by <a href="https://moatasimashraf.000webhostapp.com" target="_blank">Moatasim</a></p>
+    <script src="js/project2.js"></script>
+</body>
+</html>

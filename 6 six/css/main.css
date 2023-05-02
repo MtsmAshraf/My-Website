@@ -1,0 +1,127 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --bg-color: hsl(234, 17%, 12%);
+    --num-bg:hsl(236, 21%, 26%);
+    --text-color:hsl(345, 95%, 68%);
+    --grey-text-color:hsl(237, 18%, 59%);
+    --main-transition:all 0.2s 0s linear;
+}
+body{
+    font-family: "Red Hat Text",sans-serif;
+    background-color: var(--bg-color);
+    height: 100vh;
+}
+body > img{
+    position: absolute;
+    width: 100%;
+}
+body > img:last-of-type{
+    bottom: 0;
+}
+body > .container{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    padding: 100px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body > .container h2{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 500;
+}
+body > .container h2 p{
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 40px;
+    opacity: 0;
+    transition: var(--main-transition);
+    margin-top: 20px;
+}
+
+body > .container .timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+    color: wheat;
+}
+body > .container .timer .box{
+    margin-bottom: 10px;
+}
+@media (max-width:640px) {
+    body{
+        height: fit-content;
+    }
+    body > img:last-of-type{
+        bottom: -180px;
+    }
+    body > .container .timer{
+        flex-direction: column;
+        justify-content: center;
+    }
+    body > .container h2 p{
+        margin-bottom: 30px;        
+    }
+}
+body > .container .timer .box div{
+    background-color: var(--num-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    width: 100px;
+    min-width: 100px;
+    position: relative;
+}
+body > .container .timer .box div::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    top:0;
+    left: 0;
+    background-color: black;
+    opacity: 0.2;
+}
+body > .container .timer .box .unit{
+    color: var(--grey-text-color);
+}
+
+body > .container .social{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+body > .container .social li a{
+    transition: var(--main-transition);
+    color: var(--grey-text-color);
+    font-size: 30px;
+}
+body > .container .social li:hover a{
+    color: var(--text-color) !important;
+    cursor: pointer;
+}
+body > .container .social li:not(:last-of-type){
+    margin-right: 20px;
+}

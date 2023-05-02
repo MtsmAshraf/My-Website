@@ -1,0 +1,383 @@
+<!--This temp uses bootstrap framework 
+    using frameworks is NOT a MUST but u should know how this work in case of u work in a company that uses it
+    IMP: u use the framework to speed up ur work that i alredy know how to make, NOT to make work u canNOT make!!
+    This enables u to add classes to ur elements to add a cetain style to them based on a specific rules of names
+    U also can get the html code of a certain component (ex: nav.) and edit it manually then if u need to
+    these rules is here "https://getbootstrap.com/docs/5.2/utilities/"
+    Bootstrap uses a 12-col-grid system. so to make an element take the 1/3 of a parent width give it the class "col-4" and "col-3" for the 1/4 of the width and so on.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootTemp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>bootTemp</title>
+</head>
+<body>
+    <!--some imp untilities:
+        m: margin
+        mb: margin-bottom
+        mt: margin-top
+        ms: margin-left (s fo start)
+        me: margin-right (e fo end)
+        ex: mb-2, ms-auto, mt-lg-0 (lg: large screens > 992px )
+        the same for padding
+        ex: p-2, ps-auto, pt-lg-0 (lg: large screens > 992px )
+        1: 0.25rem
+        2: 0.5rem
+        4: 1.5rem
+        5: 3rem
+        remember 1rem = 100% of the font size of root (html (16 by default)) 0.5rem = 50% of the font size of root and so on
+
+    -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="imgs/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ms-auto mb-2 mb-lg-0">
+              <li class="nav-item p-2 p-lg-3">
+                <a class="nav-link  active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item p-2 p-lg-3">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item p-2 p-lg-3">
+                <a class="nav-link" href="#">Porfolio</a>
+              </li>
+              <li class="nav-item p-2 p-lg-3">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item p-2 p-lg-3">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+           <div class="search">
+            <i class="fa-solid fa-magnifying-glass ps-2 d-none d-lg-block"></i>
+           </div>
+           <a href="#" class="btn ms-lg-3 rounded-pill main-btn">Log In</a>
+          </div>
+        </div>
+      </nav>
+      <div class="landing d-flex justify-content-center align-items-center">
+       <div class="text-center">
+        <h1 class="text-light">Taste The Creativity</h1>
+        <p class="text-white-50 fs-6 mb-3 text-capitalize">We make awesome graphics and web design</p>
+        <!-- text-white-50: makes light font color with low opacity (the same for text-black-50) -->
+        <!-- fs-x: makes the font size equal to the size of hx (ex fs-5 = h5) -->
+        <a href="#" class="btn ms-lg-3 rounded-pill main-btn">Get Started</a>
+       </div>
+      </div>
+      <div class="features pt-5 pb-5">
+        <div class="container text-center">
+          <div class="main-title mb-5">
+            <img class="" src="imgs/title.png" alt="">
+            <h2 class="text-capitalize mt-3">we are good at</h2>
+            <p class="text-uppercase text-black-50 fs-6">some of these stuff under</p>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4  mt-5">
+              <div class="icons position-relative mb-4">
+                <i class="fa-solid fa-1 fa-10x position-absolute" id="icoooooon"></i>
+                <i class="fa-solid fa-3x fa-pencil position-absolute"></i>
+              </div>
+              <h3 class="text-uppercase">graphic design</h3>
+              <p class="text-black-50 lh-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem cupiditate officia, voluptatibus minima odit at voluptatem deserunt</p>
+              <!-- lh-lg: line-height:2; -->
+            </div>
+            <div class="col-md-6 col-lg-4  mt-5">
+              <div class="icons position-relative mb-4">
+                <i class="fa-solid fa-1 fa-10x position-absolute" id="icoooooon"></i>
+                <i class="fa-solid fa-3x fa-pencil position-absolute"></i>
+              </div>
+              <h3 class="text-uppercase">graphic design</h3>
+              <p class="text-black-50 lh-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem cupiditate officia, voluptatibus minima odit at voluptatem deserunt</p>
+              <!-- lh-lg: line-height:2; -->
+            </div>
+            <div class="col-md-6 col-lg-4  mt-5">
+              <div class="icons position-relative mb-4">
+                <i class="fa-solid fa-1 fa-10x position-absolute" id="icoooooon"></i>
+                <i class="fa-solid fa-3x fa-pencil position-absolute"></i>
+              </div>
+              <h3 class="text-uppercase">graphic design</h3>
+              <p class="text-black-50 lh-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem cupiditate officia, voluptatibus minima odit at voluptatem deserunt</p>
+              <!-- lh-lg: line-height:2; -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="container text-center">
+          <div class="main-title mb-5">
+            <img class="" src="imgs/title.png" alt="">
+            <h2 class="text-capitalize mt-3">we make this</h2>
+            <p class="text-uppercase text-black-50 fs-6">Prepare to be amazed</p>
+          </div>
+          <ul class="d-flex list-unstyled justify-content-center align-items-center">
+            <li class="p-2 pt-1 pb-1 active rounded-pill" style="background-color: var(--red-color); color:var(--yellow-color)">All</li>
+            <li class="p-2 pt-1 pb-1">Design</li>
+            <li class="p-2 pt-1 pb-1">Code</li>
+            <li class="p-2 pt-1 pb-1">Photo</li>
+            <li class="p-2 pt-1 pb-1">App</li>
+          </ul>
+          <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+              <img src="imgs/work-01.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+              <img src="imgs/work-01.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+              <img src="imgs/work-01.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+              <img src="imgs/work-01.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+              <img src="imgs/work-01.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+              <img src="imgs/work-01.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+              <img src="imgs/work-01.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+              <img src="imgs/work-01.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about pt-5 pb-5">
+        <div class="container">
+          <div class="main-title text-center mb-5">
+            <img class="" src="imgs/title.png" alt="">
+            <h2 class="text-capitalize mt-3">some stuff about us</h2>
+            <p class="text-uppercase text-black-50 fs-6">Prepare to be amazed</p>
+          </div>
+          <div class="description text-black-50 text-center m-auto " style="max-width: 500px;">
+            Dolores voluptatibus harum optio eaque sit! ;skjdnln ;l n;lnl Ratione porro cupiditate id velit et quaerat dolores beatae, exercitationem nostrum. Impedit cupiditate labore nemo natus.
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-4 m-4" style="max-width: 350px;">
+              <h3>Retina Design</h3>
+              <p class="text-black-50"> Dolores voluptatibus harum optio eaque sit! Ratio. Impedit cupiditate labore nemo natus.</p>
+              <p class="text-black-50 mb-4"> Dolores voluptatibus harum optio eaque sit! Ratione porro cupiditate id velit et quaerat dolores beatae, exercitationem nostrum. Impedit cupiditate labore nemo natus.</p>
+              <a href="#" class="btn rounded-pill main-btn">Order Me One</a>
+            </div>
+            <div class="col-lg-7">
+              <div class="img">
+                <img class="img-fluid" src="imgs/laptop.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="team pt-5 pb-5" style="background-color: var(--section-color);">
+        <div class="container">
+          <div class="text-center">
+            <h3 class="fw-bold" style="color: var(--yellow-color);">Meet The Team</h3>
+            <p class="text-black-50">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni inventore eaque doloribus rerum perspiciatis iste culpa repudiandae </p>
+          </div>
+          <div class="row mt-5 pt-4">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="box bg-white">
+                <div class="img">
+                  <img src="imgs/team-1.png" class="img-fluid" alt="">
+                </div>
+                <h2 class="text-center text-light fs-3 p-2" style="background-color: var(--green-color);">
+                  John Doe
+                </h2>
+                <blockquote class="text-black-50  text-center p-3 fs-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt exercitationem </blockquote>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="box bg-white">
+                <div class="img">
+                  <img src="imgs/team-2.png" class="img-fluid" alt="">
+                </div>
+                <h2 class="text-center text-light fs-3 p-2" style="background-color: var(--green-color);">
+                  John Doe
+                </h2>
+                <blockquote class="text-black-50  text-center p-3 fs-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt exercitationem </blockquote>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="box bg-white">
+                <div class="img">
+                  <img src="imgs/team-3.png" class="img-fluid" alt="">
+                </div>
+                <h2 class="text-center text-light fs-3 p-2" style="background-color: var(--green-color);">
+                  John Doe
+                </h2>
+                <blockquote class="text-black-50  text-center p-3 fs-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt exercitationem </blockquote>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="box bg-white">
+                <div class="img">
+                  <img src="imgs/team-1.png" class="img-fluid" alt="">
+                </div>
+                <h2 class="text-center text-light fs-3 p-2" style="background-color: var(--green-color);">
+                  John Doe
+                </h2>
+                <blockquote class="text-black-50  text-center p-3 fs-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt exercitationem </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="company pt-5 pb-5">
+        <div class="container">
+          <div class="row text-center align-items-center">
+            <div class="col-sm-6 col-md-4 mb-4 col-lg-2">
+              <img src="imgs/tech-1.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-sm-6 col-md-4 mb-4  col-lg-2">
+              <img src="imgs/tech-2.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-sm-6 col-md-4 mb-4  col-lg-2">
+              <img src="imgs/tech-3.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-sm-6 col-md-4 mb-4  col-lg-2">
+              <img src="imgs/tech-4.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-sm-6 col-md-4 mb-4  col-lg-2">
+              <img src="imgs/tech-1.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-sm-6 col-md-4 mb-4  col-lg-2">
+              <img src="imgs/tech-1.png" alt="" class="img-fluid">
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="project pt-5 pb-5 " style="background-color: var(--dark-color);">
+        <div class="container pt-5 pb-5 text-center text-light">
+          <h2>Start Your Project Now</h2>
+          <p class="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eius numquam praesentium </p>
+          <a href="#" class="btn rounded-pill mt-3 text-uppercase main-btn">start project</a>
+        </div>
+      </div>
+      <div class="blogs pt-5 pb-5">
+        <div class="container">
+          <div class="main-title text-center mb-5">
+            <img class="" src="imgs/title.png" alt="">
+            <h2 class="text-capitalize mt-3">read our blog</h2>
+            <p class="text-uppercase text-black-50 fs-6">new stories</p>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <!-- The next card code is copied from bootstrap -->
+              <!-- start bootstrap card -->
+              <div class="card mb-3">
+                <img src="imgs/blog-1.jpg" class="card-img-top" alt="blog-img">
+                <div class="card-body">
+                  <span class="text-black-50 fs-6">Jan 12,2022</span>
+                  <h5 class="card-title fw-bold">Some Awesome Blog Title</h5>
+                </div>
+              </div>
+              <!-- end bootstrap card -->
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <!-- The next card code is copied from bootstrap -->
+              <!-- start bootstrap card -->
+              <div class="card mb-3">
+                <img src="imgs/blog-1.jpg" class="card-img-top" alt="blog-img">
+                <div class="card-body">
+                  <span class="text-black-50 fs-6">Jan 12,2022</span>
+                  <h5 class="card-title fw-bold">Some Awesome Blog Title</h5>
+                </div>
+              </div>
+              <!-- end bootstrap card -->
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <!-- The next card code is copied from bootstrap -->
+              <!-- start bootstrap card -->
+              <div class="card"">
+                <img src="imgs/blog-1.jpg" class="card-img-top" alt="blog-img">
+                <div class="card-body">
+                  <span class="text-black-50 fs-6">Jan 12,2022</span>
+                  <h5 class="card-title fw-bold">Some Awesome Blog Title</h5>
+                </div>
+              </div>
+              <!-- end bootstrap card -->
+            </div>
+          </div>
+          <div class="text-center">
+            <a href="#" class="btn text-center rounded-pill mt-4 text-uppercase main-btn">more stories</a>
+          </div>
+        </div>
+      </div>
+      <div class="subscribe pt-4 pb-4">
+        <div class="container">
+          <form action="" class="row align-items-center text-center">
+            <div class="col-md-6 col-lg-3">
+              <div class="text-capitalize">subscribe to our newsettler</div>
+            </div>
+            <div class="col-md-6 col-lg-7">
+              <input type="text" class="w-100 bg-transparent p-2 pt-1 pb-1 mt-4 m-md-4 m-lg-0 text-light" placeholder="Enter Your Email">
+            </div>
+            <div class="col-lg-2">
+              <input type="submit" class="btn w-lg-100 text-center rounded-pill text-uppercase mt-4 m-md-4 m-lg-0 main-btn" value="Subscribe">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer text-light pt-4 pb-4" style="background-color: var(--dark-color);">
+        <div class="container pt-4">
+          <div class="row text-md-start text-center">
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="img-fluid"><img src="imgs/logo.png" alt=""></div>
+              <div class="description mt-4 mb-4 text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ut amet </div>
+              <div class="copy-rights">Created by <span style="color: var(--green-color);">GOSDKNG</span>,sapodj, aadpsdm &copy; 2017 <span  style="color: var(--yellow-color);"">Bondi.Inc</span></div>
+            </div>
+            <div class="col-md-6 col-lg-2">
+              <ul class="list-unstyled">
+                <h6 class="mb-4">Links</h6>
+                <li class="mb-2 text-white-50">Home</li>
+                <li class="mb-2 text-white-50">About</li>
+                <li class="mb-2 text-white-50">Work</li>
+                <li class="mb-2 text-white-50">Testimonials</li>
+                <li class="mb-2 text-white-50">Support</li>
+                <li class="mb-2 text-white-50">Terms And Conditions</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-2">
+              <ul class="list-unstyled">
+                <h6 class="mb-4">About Us</h6>
+                <li class="mb-2 text-white-50">Sign In</li>
+                <li class="mb-2 text-white-50">About</li>
+                <li class="mb-2 text-white-50">Blog</li>
+                <li class="mb-2 text-white-50">Support</li>
+                <li class="mb-2 text-white-50">Work</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <h6 class="mb-4">Contact Us</h6>
+              <div class="description mt-4 mb-4 text-white-50">Lorem ipsum dolor sit  adipisicing elit. Minima ut amet </div>
+              <a href="#" class="btn w-100 text-light rounded-pill main-btn">fake@gmail.com</a>
+              <ul class="list-unstyled mt-4">
+                <i class="fa-brands fa-facebook rounded-circle me-3 fs-5 p-2" style="background-color: #1877f2; width: 20px;"></i>
+                <i class="fa-brands fa-twitter me-3 fs-5 rounded-circle p-2" style="background-color: #1da1f2; width: 20px;"></i>
+                <i class="fa-brands fa-instagram me-3 fs-5 rounded-circle p-2" style="background-color: #0077b5; width: 20px;"></i>
+                <i class="fa-brands fa-linkedin me-3 fs-5 rounded-circle p-2" style="background-color: #c13584; width: 20px;"></i>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- adding the js file of the font awesome converts all icons (i) to (svg) pics -->
+    <script src="js/all.min.js"></script>
+</body>
+</html>
