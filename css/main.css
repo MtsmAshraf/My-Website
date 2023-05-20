@@ -304,6 +304,7 @@ header .container .header-nav{
     width: 300px; */
     transition: all 0.5s 0s ease-in-out;
     overflow: hidden;
+    border: 1px solid var(--sec-color);
 }
 header .container .header-nav li{
     margin-bottom: 20px;
@@ -922,6 +923,10 @@ button:hover{
 .digitf{
     background-image: url(../images/digitf.png) !important;
 }
+.mstskp{
+    background-image: url(../images/MSTSKP.PNG) !important;
+}
+mstskp
 .to{
     background-image: url(../images/to-do-app.jpg);
 }
