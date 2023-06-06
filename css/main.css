@@ -812,7 +812,7 @@ button:hover{
     overflow-y: scroll;
     border-top: 2px solid var(--main-color);
     border-bottom: 2px solid var(--main-color);
-    background-image: linear-gradient(to bottom, var(--main-color) 20% ,var(--sec-color) 40%);
+    background-image: linear-gradient(to bottom, var(--main-color) 20% ,transparent 40%);
 }
 @media (max-width:992px) {
     .skills .other-work .other-work-links{
@@ -926,7 +926,9 @@ button:hover{
 .mstskp{
     background-image: url(../images/MSTSKP.PNG) !important;
 }
-mstskp
+.vuertfolio{
+    background-image: url(../images/vuertfolio.PNG) !important;
+}
 .to{
     background-image: url(../images/to-do-app.jpg);
 }
