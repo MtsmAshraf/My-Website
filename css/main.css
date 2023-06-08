@@ -857,77 +857,77 @@ button:hover{
     background-repeat: no-repeat;
     height: 130px;
 }
-.skills .other-work .other-work-links div:nth-child(1){
+.dashboard{
     background-image: url(../images/dashboard.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(2){
+.john-doe{
     background-image: url(../images/john.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(3){
+.stimulus{
     background-image: url(../images/stimulus.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(4){
+.chain{
     background-image: url(../images/chain.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(5){
+.event{
     background-image: url(../images/event.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(6){
+.dream{
     background-image: url(../images/dream.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(7){
+.edu{
     background-image: url(../images/edu.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(8){
+.template{
     background-image: url(../images/template.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(9){
+.bondi{
     background-image: url(../images/bondi.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(10){
+.vanilla{
     background-image: url(../images/vanilla.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(11){
+.greyscale{
     background-image: url(../images/grey.PNG);
 }
-.skills .other-work .other-work-links div:nth-child(12){
+.design{
     background-image: url(../images/design.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(13){
+.space{
     background-image: url(../images/space.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(14){
+.bootstrap-dashboard{
     background-image: url(../images/bootstrap_dashboard.PNG);
 }
-.skills .other-work .other-work-links div:nth-child(15){
+.credit-card{
     background-image: url(../images/card.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(16){
+.countdown{
     background-image: url(../images/countdown.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(17){
+.rps{
     background-image: url(../images/RPS.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(18){
+.draw-app{
     background-image: url(../images/draw.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(19){
+.weather-app{
     background-image: url(../images/weather.jpg);
 }
-.skills .other-work .other-work-links div:nth-child(20){
+.to{
     background-image: url(../images/to-do-app.jpg);
 }
 .ramadan-night{
-    background-image: url(../images/ramadan-nights-bg.jpg) !important;
+    background-image: url(../images/ramadan-nights-bg.jpg);
 }
 .digitf{
-    background-image: url(../images/digitf.png) !important;
+    background-image: url(../images/digitf.png);
 }
 .mstskp{
-    background-image: url(../images/MSTSKP.PNG) !important;
+    background-image: url(../images/MSTSKP.PNG);
 }
 .vuertfolio{
-    background-image: url(../images/vuertfolio.PNG) !important;
+    background-image: url(../images/vuertfolio.PNG);
 }
 .to{
     background-image: url(../images/to-do-app.jpg);
@@ -946,6 +946,9 @@ button:hover{
 }
 .typathon{
     background-image: url(../images/typathon.jpg);
+}
+.quiz-game{
+    background-image: url(../images/game.jpg);
 }
 .skills .other-work .other-work-links div:hover a{
     cursor: pointer;
@@ -1055,25 +1058,6 @@ button:hover{
     height: 100px;
 }
 /* start */
-
-.skills .apps .apps-links div:nth-child(1){
-    background-image: url(../images/card.jpg);
-}
-.skills .apps .apps-links div:nth-child(2){
-    background-image: url(../images/countdown.jpg);
-}
-.skills .apps .apps-links div:nth-child(3){
-    background-image: url(../images/RPS.jpg);
-}
-.skills .apps .apps-links div:nth-child(4){
-    background-image: url(../images/draw.jpg);
-}
-.skills .apps .apps-links div:nth-child(5){
-    background-image: url(../images/weather.jpg);
-}
-.skills .apps .apps-links div:nth-child(6){
-    background-image: url(../images/game.jpg);
-}
 .skills .apps .apps-links div:hover a{
     cursor: pointer;
     opacity: 0;
