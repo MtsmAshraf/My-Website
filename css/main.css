@@ -468,6 +468,12 @@ nav li.active{
     color: white;
     line-height: 1.4;
 }
+.landing .container .text > p a{
+    color: var(--sec-color)
+}
+.landing .container .text > p a:hover{
+    text-decoration: underline;
+}
 .landing .container .text .bottom{
     margin-top: 30px;
     display: flex;
@@ -887,7 +893,7 @@ button:hover{
 .vanilla{
     background-image: url(../images/vanilla.jpg);
 }
-.greyscale{
+.grayscale{
     background-image: url(../images/grey.PNG);
 }
 .design{

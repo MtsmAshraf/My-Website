@@ -5,6 +5,7 @@ let footerChildren = document.querySelectorAll("footer .container > *");
 let navIcon = document.querySelector("header i");
 let headerNavShow = false;
 let scrollSpan = document.querySelector(".scroller span");
+let resumeLink = document.querySelector(".resume-link") 
 navIcon.onclick = () => {
     if(headerNavShow === false){
         document.querySelector("header .header-nav").style.cssText = `
@@ -58,6 +59,12 @@ navLis.forEach((li,index)=>{
             opacity:0;
         `;
     };
+resumeLink.onmouseover = ()=>{
+    cursor2.style.display= "none";
+};
+resumeLink.onmouseleave = ()=>{
+    cursor2.style.display= "block";
+};
 });
 navSpans.forEach((span,index)=>{
     span.onclick = ()=>{
