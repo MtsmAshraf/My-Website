@@ -935,6 +935,9 @@ button:hover{
 .vuertfolio{
     background-image: url(../images/vuertfolio.PNG);
 }
+.open-app{
+    background-image: url(../images/open-app.PNG);
+}
 .to{
     background-image: url(../images/to-do-app.jpg);
 }
