@@ -5,7 +5,7 @@ let footerChildren = document.querySelectorAll("footer .container > *");
 let navIcon = document.querySelector("header i");
 let headerNavShow = false;
 let scrollSpan = document.querySelector(".scroller span");
-let resumeLink = document.querySelector(".resume-link") 
+let landingLinks = document.querySelectorAll(".landing a")
 navIcon.onclick = () => {
     if(headerNavShow === false){
         document.querySelector("header .header-nav").style.cssText = `
@@ -59,12 +59,14 @@ navLis.forEach((li,index)=>{
             opacity:0;
         `;
     };
-resumeLink.onmouseover = ()=>{
-    cursor2.style.display= "none";
-};
-resumeLink.onmouseleave = ()=>{
-    cursor2.style.display= "block";
-};
+landingLinks.forEach((link) => {
+    link.onmouseover = ()=>{
+        cursor2.style.display= "none";
+    };
+    link.onmouseleave = ()=>{
+        cursor2.style.display= "block";
+    };
+})
 });
 navSpans.forEach((span,index)=>{
     span.onclick = ()=>{
@@ -241,7 +243,7 @@ workIcon.onclick = ()=>{
 }
 workBtn.onclick = ()=>{
     document.querySelector(".other-work").style.cssText = `
-        height: 800px !important;
+        height: 90vh !important;
         padding: 40px;
         padding-top: 70px !important;
         border: 2px solid var(--main-color);
@@ -271,7 +273,7 @@ let appsLinks = document.querySelector(".apps .apps-links");
 let appsClose = document.querySelector(".apps i");
 gameBtn.onclick = ()=>{
     apps.style.cssText = `
-        height: 700px;
+        height: 90vh;
         padding: 50px;
         border: 2px solid var(--sec-color);
         border-right: none;

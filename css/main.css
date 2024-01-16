@@ -3,6 +3,9 @@
     --main-color:#0f0d20;
     --sec-color:rgb(240, 16, 16);
     --main-color-semi: #0f0d2098;
+    --google-color: #4285f4;
+    --upwork-color: #14a800;
+    --whatsapp-color: #128c7e;
 }
 /* end vars */
 /* start global rules */
@@ -53,6 +56,7 @@ ul{
 }
 a{
     text-decoration: none;
+    color: var(--sec-color);
     position: relative;
 }
 a::before{
@@ -72,7 +76,7 @@ a:hover:before{
     /* right: -10px; */
 }
 button{
-    background-color: transparent;
+    background-color: rgba(73, 21, 21, 0.2);
 }
 button:hover{
     cursor: pointer;
@@ -333,8 +337,8 @@ header .container .header-nav .social{
 }
 @media (max-width:767px) {
     .container{
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
     header .container{
         padding-left: 0;
@@ -468,25 +472,37 @@ nav li.active{
     color: white;
     line-height: 1.4;
 }
-.landing .container .text > p a{
-    color: var(--sec-color)
+.landing .container .text p a{
+    font-weight: bold;
+    font-size: 20px;
 }
-.landing .container .text > p a:hover{
+.landing .container .text  p a:hover{
     text-decoration: underline;
 }
 .landing .container .text .bottom{
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+    
+    /* justify-content: space-between; */
 }
 .landing .container .text .bottom p{
-    font-size: 14px;
+    /* font-size: 14px; */
     color: var(--sec-color);
     line-height: 1.4;
     font-weight: lighter;
 }
-.landing .container .text .bottom p:first-of-type{
-    margin-right: 40px;
+.landing .container .text .bottom p a{
+    color: var(--sec-color)
+}
+.landing .container .text .bottom a.gmail{
+    color: var(--google-color) !important;
+}
+.landing .container .text .bottom a.upwork{
+    color: var(--upwork-color) !important;
+}
+.landing .container .text .bottom a.whatsapp{
+    color: var(--whatsapp-color) !important;
 }
 .landing .container .img{
     height: 450px;
@@ -549,7 +565,7 @@ nav li.active{
     }
     .landing .bottom{
         flex-direction: row;
-        margin-top: 60px !important;
+        /* margin-top: 60px !important; */
     }
     .landing .bottom p{
         font-size: 10px !important;
@@ -569,6 +585,18 @@ nav li.active{
     /* .landing .dots-img{
         display: none;
     } */
+}
+@media (max-width:992px){
+    .landing .text{
+        text-align: center;
+    }
+    .landing h2{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .landing .text .bottom{
+        justify-content: center;
+    }
 }
 /* end landing */
 /* start info */
@@ -769,15 +797,15 @@ button:hover{
 }
 .skills .other-work{
     background-color: var(--sec-color);
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
+    transform: translateX(-50%) translateY(-50%);
     height: 0px;
     padding: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateX(-50%) translateY(-50%);
     width: 80%;
     z-index: 15;
     border-radius: 6px;
@@ -995,16 +1023,16 @@ button:hover{
 .skills .apps{
     border: none;
     background-color: var(--main-color);
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
+    transform: translateX(-50%) translateY(-50%);
     /* height: 0px; */
     height: 0px;
     padding: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateX(-50%) translateY(-50%);
     width: fit-content;
     z-index: 15;
     border-radius: 6px;
@@ -1135,7 +1163,7 @@ button:hover{
 @media (max-width:767px) {
     .skills .other-work{
         /* overflow-y: scroll; */
-        top: 20%;
+        /* top: 20%; */
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
@@ -1177,7 +1205,7 @@ button:hover{
     }
     .skills .apps{
         width: 80%;
-        top: 70%;
+        /* top: 70%; */
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
