@@ -2,10 +2,12 @@
 :root{
     --main-color:#0f0d20;
     --sec-color:rgb(240, 16, 16);
+    --sec-color-trans:rgb(240, 16, 16,0.5);
     --main-color-semi: #0f0d2098;
     --google-color: #4285f4;
     --upwork-color: #14a800;
     --whatsapp-color: #128c7e;
+    --main-transition: all 0.2s 0s linear;
 }
 /* end vars */
 /* start global rules */
@@ -479,8 +481,18 @@ nav li.active{
 .landing .container .text  p a:hover{
     text-decoration: underline;
 }
+.landing .container .text .skills-icons{
+    margin-top: 20px;
+}
+.landing .container .text .skills-icons span{
+    background-color: var(--sec-color-trans);
+    width: 80px;
+}
+.landing .container .text .skills-icons img{
+    width: 40px;
+}
 .landing .container .text .bottom{
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     gap: 20px;
     
@@ -596,6 +608,14 @@ nav li.active{
     }
     .landing .text .bottom{
         justify-content: center;
+    }
+}
+@media (max-width: 600px){
+    .landing .container .text .skills-icons img{
+        width: 30px;
+    }
+    .landing .text .bottom p a{
+        font-size: 14px;
     }
 }
 /* end landing */
