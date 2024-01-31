@@ -914,6 +914,9 @@ button:hover{
 .dashboard{
     background-image: url(../images/dashboard.jpg);
 }
+.black-dashboard{
+    background-image: url(../images/black-dash-1.jpg);
+}
 .john-doe{
     background-image: url(../images/john.jpg);
 }
