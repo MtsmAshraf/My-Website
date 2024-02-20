@@ -26,6 +26,9 @@ body{
     width: 100vw;
     overflow-x: hidden;
 }
+.arabic{
+    font-family: "EL Messiri", sans-serif;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -1421,13 +1424,21 @@ button:hover{
     opacity: 0;
     height: 0;
     text-align: center;
-    vertical-align:middle;
+    vertical-align: center;
     transition: height 0.2s 0.2s linear , opacity 0.2s 0.5s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 .testimonials .container .person.active p{
     padding-bottom: 20px;
     height: 200px;
     opacity: 1;
+}
+.testimonials .container .person p.arabic{
+}
+.testimonials .container .person p{
 }
 .testimonials .container .person .person-info{
     padding: 20px;
