@@ -382,7 +382,7 @@ nav li{
     justify-content: center;
     width: 8px;
     height: 8px;
-    background-color: var(--main-color);
+    background-color: var(--sec-color);
     margin-bottom: 20px;
     transform: rotateZ(45deg);
     transition: all 0.2s 0s linear;
@@ -436,7 +436,9 @@ nav li.active{
     height: 100vh;
     position: relative;
     background-image: linear-gradient(120deg, var(--main-color) 40% ,var(--sec-color) 100%  );
+    background-image: url(../images/hero-bg.svg);
     background-size: 150%;
+    background-repeat: no-repeat;
     animation: change-gradient 5s linear 0s infinite forwards alternate;
 
 }
@@ -447,9 +449,19 @@ nav li.active{
 .landing .container > div{
     height: 100%;
 }
-.landing .container .text {
+.landing .container .text{
     width: 40%;
     margin-right: 200px;
+}
+.landing .container .text *{
+    transition: var(--main-transition);
+    transition-duration: 0.5s;
+    transform: translateY(-50px);
+    opacity: 0;
+}
+.landing.animate .container .text *{
+    transform: translateY(0px);
+    opacity: 1;
 }
 .landing .container .text > h2{
     font-size: 60px;
@@ -516,14 +528,23 @@ nav li.active{
 .landing .container .text .bottom a.whatsapp{
     color: var(--whatsapp-color) !important;
 }
-.landing .container .img{
+.landing .container > .img{
     height: 450px;
     width: 450px;
     /* overflow: hidden; */
     border-radius: 4px;
     position: relative;
 }
-.landing .container .img::before{
+.landing .container > .img  img{
+    transition: var(--main-transition);
+    transform: translateY(100px);
+    opacity: 0;
+}
+.landing.animate .container > .img img{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.landing .container > .img::before{
     content: "";
     position: absolute;
     width: 100%;
@@ -533,20 +554,20 @@ nav li.active{
     border: 1px solid white;
     z-index: 2;
 }
-.landing .container .img .dots-img:not(:last-child){
+.landing .container > .img .dots-img:not(:last-child){
     position: absolute;
     top:-50px;
     left:-50px;
 }
-.landing .container .img .dots-img:last-child{
+.landing .container > .img .dots-img:last-child{
     position: absolute;
     bottom: -150px;
     right:-150px;
 }
-.landing .container .img .dots-img:last-child div{
+.landing .container > .img .dots-img:last-child div{
     background-color: var(--main-color);
 }
-.landing .container .img img{
+.landing .container > .img img{
     position: relative;
     height: 100%;
     width: 100%;
@@ -582,12 +603,12 @@ nav li.active{
     .landing .bottom p{
         font-size: 10px !important;
     }
-    .landing .container .img{
+    .landing .container > .img{
         width: 250px;
         height: 250px;
         transform: translateY(-50px);
     }
-    .landing .container .img img{
+    .landing .container > .img img{
         width: 250px;
         height:250px;
     }
