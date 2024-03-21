@@ -72,11 +72,11 @@ landingLinks.forEach((link) => {
     };
 })
 });
-navSpans.forEach((span,index)=>{
-    span.onclick = ()=>{
-        window.scrollTo(0,sections[index].offsetTop)
-    }
-})
+// navSpans.forEach((span,index)=>{
+//     span.onclick = ()=>{
+//         window.scrollTo(0,sections[index].offsetTop)
+//     }
+// })
 animatedChildren.forEach((child)=>{
     child.style.cssText = `
         opacity:0;
