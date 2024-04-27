@@ -5,6 +5,11 @@ let footerChildren = document.querySelectorAll("footer .container > *");
 let navIcon = document.querySelector("header i");
 let headerNavShow = false;
 let scrollSpan = document.querySelector(".scroller span");
+let landing = document.querySelector(".landing")
+let landingLinks = document.querySelectorAll(".landing a")
+let landingTextP = document.querySelectorAll(".landing .container .text > p");
+let landingTextIcons = document.querySelectorAll(".landing .container .text .skills-icons span");
+let landingTextBtns = document.querySelectorAll(".landing .container .text .bottom > *");
 navIcon.onclick = () => {
     if(headerNavShow === false){
         document.querySelector("header .header-nav").style.cssText = `
@@ -58,12 +63,20 @@ navLis.forEach((li,index)=>{
             opacity:0;
         `;
     };
-});
-navSpans.forEach((span,index)=>{
-    span.onclick = ()=>{
-        window.scrollTo(0,sections[index].offsetTop)
-    }
+landingLinks.forEach((link) => {
+    link.onmouseover = ()=>{
+        cursor2.style.display= "none";
+    };
+    link.onmouseleave = ()=>{
+        cursor2.style.display= "block";
+    };
 })
+});
+// navSpans.forEach((span,index)=>{
+//     span.onclick = ()=>{
+//         window.scrollTo(0,sections[index].offsetTop)
+//     }
+// })
 animatedChildren.forEach((child)=>{
     child.style.cssText = `
         opacity:0;
@@ -97,7 +110,7 @@ window.onscroll = () => {
     if(document.querySelector(".container").offsetWidth > 992){
         if(scrollY >= document.querySelector("section").offsetHeight - 100){
             // document.querySelector("header img").setAttribute("src","images/scroll-Logo.png");
-            navIcon.style.color = "var(--sec-color)"; 
+            // navIcon.style.color = "var(--sec-color)"; 
             navLis.forEach((li)=>{
                 if(li.classList.contains("active")){
                     li.style.borderColor = "var(--sec-color)";
@@ -108,13 +121,13 @@ window.onscroll = () => {
             })
         }else{
             document.querySelector("header img").setAttribute("src","images/Logo-noBg.png");
-            navIcon.style.color = "var(--main-color)"; 
+            navIcon.style.color = "var(--sec-color)"; 
             navLis.forEach((li)=>{
                 if(li.classList.contains("active")){
-                    li.style.borderColor = "var(--main-color)";
+                    li.style.borderColor = "var(--sec-color)";
                     li.style.backgroundColor = "transparent";
                 }else{
-                    li.style.backgroundColor = "var(--main-color)";
+                    li.style.backgroundColor = "var(--sec-color)";
                 }
             })
         }
@@ -234,7 +247,7 @@ workIcon.onclick = ()=>{
 }
 workBtn.onclick = ()=>{
     document.querySelector(".other-work").style.cssText = `
-        height: 800px !important;
+        height: 90vh !important;
         padding: 40px;
         padding-top: 70px !important;
         border: 2px solid var(--main-color);
@@ -264,7 +277,7 @@ let appsLinks = document.querySelector(".apps .apps-links");
 let appsClose = document.querySelector(".apps i");
 gameBtn.onclick = ()=>{
     apps.style.cssText = `
-        height: 700px;
+        height: 90vh;
         padding: 50px;
         border: 2px solid var(--sec-color);
         border-right: none;
@@ -313,7 +326,20 @@ window.addEventListener("load",()=>{
     setTimeout(() => {
         loader.classList.add("loader-hidden");
     }, 1000);
+    setTimeout(() => {
+        landing.classList.add("animate");
+    }, 1200);
 })
+let delayFunction = (arr) => {
+    arr.forEach((child, index) => {
+        child.style.cssText = `
+            transition-delay: ${index * 0.2}s;
+        `
+    })
+}
+delayFunction(landingTextBtns)
+delayFunction(landingTextIcons)
+delayFunction(landingTextP)
 
 // let mouseClickAudio = new Audio();
 // mouseClickAudio.src = "../images/audio/Mouse-Click.mp3";
