@@ -1,6 +1,6 @@
 /* start vars */
 :root{
-    --main-color:#0f0d20;
+    --main-color:#020206;
     --sec-color:rgb(240, 16, 16);
     --sec-color-trans:rgb(240, 16, 16,0.5);
     --main-color-semi: #0f0d2098;
@@ -25,6 +25,7 @@ body{
     cursor:none;
     width: 100vw;
     overflow-x: hidden;
+    background-color: var(--main-color);
 }
 .arabic{
     font-family: "EL Messiri", sans-serif;
@@ -47,9 +48,9 @@ section{
     background-size: cover !important;
     /* background-repeat: no-repeat; */
 }
-footer{
-    width: 100%;
-    scroll-snap-align: center;
+i{
+    /* font-family: "Font Awesome Icon"; */
+    font-weight: 900;
 }
 @media (max-width:992px) {
     section{
@@ -81,7 +82,9 @@ a:hover:before{
     /* right: -10px; */
 }
 button{
+    box-shadow: 2px 2px 24px -2px var(--sec-color);
     background-color: rgba(73, 21, 21, 0.2);
+    border-radius: 8px;
 }
 button:hover{
     cursor: pointer;
@@ -123,7 +126,7 @@ button:hover{
     background-color: var(--sec-color);
     border-radius: 50%;
 }
-.overlay{
+/* .overlay{
     position: absolute;
     left: 0;
     top: 0;
@@ -131,7 +134,7 @@ button:hover{
     height: 100%;
     background-color: var(--main-color);
     opacity: 0.95;
-}
+} */
 .cursor{
     width: 10px;
     height: 10px;
@@ -556,6 +559,7 @@ nav li.active{
     left: 30px;
     border: 1px solid white;
     z-index: 2;
+    border-radius: 10px;
 }
 .landing .container > .img .dots-img:not(:last-child){
     position: absolute;
@@ -757,7 +761,7 @@ nav li.active{
 .info{
     padding-top: 150px;
     padding-bottom: 100px;
-    background-image: url(../images/info.jpg);
+    /* background-image: url(../images/info.jpg); */
     background-size: cover;
     /* background-repeat: no-repeat; */
     background-attachment: fixed;
@@ -872,7 +876,7 @@ nav li.active{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../images/skills.jpg);
+    /* background-image: url(../images/skills.jpg); */
     background-size: cover;
     background-attachment: fixed;
     /* background-repeat: no-repeat; */
@@ -1440,7 +1444,7 @@ button:hover{
 /* end skills */
 /* start testimonials */
 .testimonials{
-    background-image: url(../images/testimonials.jpg);
+    /* background-image: url(../images/testimonials.jpg); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1613,7 +1617,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(../images/contact.jpg);
+    /* background-image: url(../images/contact.jpg); */
     background-size: cover;
     background-attachment: fixed;
 }
@@ -1704,82 +1708,30 @@ button:hover{
 /* end contact */
 /* start footer */
 footer{
-    height: 100vh;
-    background-color: var(--main-color);
-    padding-top: 100px;
-    padding-bottom: 100px;
+
+}
+footer ul{
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 200px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid var(--sec-color);
+    box-shadow: 2px 2px 24px -2px var(--sec-color)
+}
+footer ul a{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--sec-color);
+    padding: 10px;
+    transition: var(--main-transition);
+    font-size: 24px;
+    width: 50px;
 }
-footer a{
-    color: var(--sec-color);
-}
-footer .container .content{
-    border-bottom: 1px solid var(--sec-color);
-    padding-bottom: 100px;
-    display: flex;
-    
-}
-footer .container .content ul:first-of-type{
-    width: 50%;
-}
-footer .container .content ul:first-of-type h4{
-    color: #cbc9e2;
-    text-transform: uppercase;
-    font-weight: normal;
-    margin-bottom: 20px;
-    letter-spacing: 5px;
-}
-footer .container .content ul li{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-footer .container .content ul:last-of-type{
-    width: 50%;
-    padding-top: 45px;
-}
-footer .container .bottom{
-    padding-top: 50px;
-    display:flex;
-    justify-content: space-between;
-    font-size: 20px;
-}
-footer .container .bottom .social{
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
-}
-@media (max-width:767px) {
-    footer .container .bottom{
-        flex-direction: column;
-        text-align: center;
-    }  
-    footer .container  ul{
-        width: 100% !important;
-        margin-left: 0;
-        margin-right: 0;
-        text-align: center;
-    }
-    footer .container  ul li{
-        text-align: center;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    footer .container .bottom ul{
-        margin-top: 20px;
-    }
-    footer .container .content{
-        text-align: center;
-        flex-direction: column;
-    }  
-    footer ul{
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
+footer ul a:hover{
+    background-color: var(--sec-color);
+    color: var(--main-color);
 }
 /* end footer */
 @keyframes change-color {
